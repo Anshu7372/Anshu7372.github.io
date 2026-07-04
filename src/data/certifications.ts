@@ -1,0 +1,52 @@
+import { Certification } from "@/types";
+
+export const certifications: Certification[] = [
+  {
+    id: "ml-math-foundations",
+    title: "Mathematical Foundations for ML and Data Science",
+    issuer: "DeepLearning.AI",
+    platform: "Coursera",
+    date: "Feb 2026",
+    icon: "brain",
+  },
+  {
+    id: "networking-essentials",
+    title: "Networking Essentials",
+    issuer: "Cisco Networking Academy",
+    platform: "Cisco",
+    date: "Sep 2021",
+    icon: "network",
+  },
+  {
+    id: "communication-skills",
+    title: "Communication Skills for Engineers",
+    issuer: "Rice University",
+    platform: "Coursera",
+    date: "Dec 2020",
+    icon: "messageSquare",
+  },
+  {
+    id: "design-thinking",
+    title: "Design Thinking for Innovation",
+    issuer: "University of Virginia",
+    platform: "Coursera",
+    date: "Aug 2020",
+    icon: "lightbulb",
+  },
+  {
+    id: "ai-for-everyone",
+    title: "AI For Everyone",
+    issuer: "DeepLearning.AI",
+    platform: "Coursera",
+    date: "Sep 2020",
+    icon: "sparkles",
+  },
+  {
+    id: "database-sql",
+    title: "Database Programming with SQL",
+    issuer: "Oracle Academy",
+    platform: "Oracle",
+    date: "Oct 2020",
+    icon: "database",
+  },
+];
