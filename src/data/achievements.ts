@@ -10,9 +10,9 @@ export const achievements: Achievement[] = [
   },
   {
     id: "gate-2025",
-    title: "GATE 2025 (Computer Science)",
+    title: "GATE 2025 (Computer Science) - Top 91% Performance Nationwide",
     description:
-      "Top 91% Performance Nationwide. Successfully qualified GATE 2025 in Computer Science & Information Technology, achieving a 91 percentile while demonstrating strong analytical thinking, problem-solving ability, and a solid foundation in core Computer Science subjects.",
+      "Successfully qualified GATE 2025 in Computer Science & Information Technology, achieving a 91 percentile while demonstrating strong analytical thinking, problem-solving ability, and a solid foundation in core Computer Science subjects.",
     icon: "award",
   },
 ];
