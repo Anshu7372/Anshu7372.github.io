@@ -9,17 +9,20 @@ import {
   Sparkles,
   Database,
   Award,
+  Cpu,
+  type LucideIcon,
 } from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { certifications } from "@/data/certifications";
 
-const iconMap: Record<string, any> = {
+const iconMap: Record<string, LucideIcon> = {
   brain: Brain,
   network: Network,
   messageSquare: MessageSquare,
   lightbulb: Lightbulb,
   sparkles: Sparkles,
   database: Database,
+  cpu: Cpu,
 };
 
 export default function Certifications() {

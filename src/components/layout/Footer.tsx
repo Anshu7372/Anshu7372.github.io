@@ -2,12 +2,13 @@
 
 import { motion } from "framer-motion";
 import { Heart, ArrowUp, Mail } from "lucide-react";
-import { GithubIcon, LinkedinIcon } from "@/components/ui/BrandIcons";
+import { GithubIcon, KaggleIcon, LinkedinIcon } from "@/components/ui/BrandIcons";
 import { personalInfo, socialLinks } from "@/data/personal";
 
 const iconMap: Record<string, React.ReactNode> = {
   github: <GithubIcon size={18} />,
   linkedin: <LinkedinIcon size={18} />,
+  kaggle: <KaggleIcon size={18} />,
   mail: <Mail size={18} />,
 };
 

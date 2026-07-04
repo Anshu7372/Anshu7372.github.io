@@ -8,13 +8,6 @@ export const achievements: Achievement[] = [
       "Achieved the highest rating (5 stars) in Python programming on HackerRank, demonstrating advanced problem-solving and coding proficiency.",
     icon: "star",
   },
-  {
-    id: "microprocessor-cert",
-    title: "8085 Microprocessor — Certificate of Completion",
-    description:
-      "Completed comprehensive coursework on 8085 Microprocessor architecture and programming from Bharat Acharya Education.",
-    icon: "cpu",
-  },
 ];
 
 export const researchInterests: ResearchInterest[] = [

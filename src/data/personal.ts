@@ -9,9 +9,11 @@ export const personalInfo = {
   phone: "+91-7373283295",
   github: "https://github.com/Anshu7372",
   githubUsername: "Anshu7372",
+  kaggle: "https://www.kaggle.com/sadashiv7372",
+  kaggleUsername: "sadashiv7372",
   linkedin: "https://www.linkedin.com/in/sadashiv-kumar-2a361b23b/",
   summary:
-    "M.Tech student at the National Institute of Technology Durgapur with a background in Machine Learning, data-driven modelling, and optimization. Skilled in Python programming, data analysis, and algorithmic problem-solving with a research-oriented mindset. Interested in applying machine learning and computational modelling approaches to real-world scientific and engineering datasets.",
+    "M.Tech student in Mathematics and Computer Science at the National Institute of Technology Durgapur with a background in Machine Learning, data-driven modelling, and optimization. Currently working on an M.Tech dissertation at IIT Patna in NLP and LLM applications for sports under the supervision of Dr. Sriparna Saha. Skilled in Python programming, data analysis, and algorithmic problem-solving with a research-oriented mindset.",
   roles: [
     "AI Researcher",
     "Machine Learning Engineer",
@@ -43,6 +45,11 @@ export const socialLinks: SocialLink[] = [
     name: "LinkedIn",
     url: "https://www.linkedin.com/in/sadashiv-kumar-2a361b23b/",
     icon: "linkedin",
+  },
+  {
+    name: "Kaggle",
+    url: "https://www.kaggle.com/sadashiv7372",
+    icon: "kaggle",
   },
   {
     name: "Email",

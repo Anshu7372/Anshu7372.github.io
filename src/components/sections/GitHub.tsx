@@ -54,7 +54,7 @@ export default function GitHub() {
                 { label: "Followers", value: "2+", icon: Users },
                 { label: "Stars", value: "10+", icon: Star },
                 { label: "Forks", value: "3+", icon: GitFork },
-              ].map((metric, idx) => (
+              ].map((metric) => (
                 <div
                   key={metric.label}
                   className="rounded-xl bg-white/[0.02] border border-white/[0.04] p-4 text-center"

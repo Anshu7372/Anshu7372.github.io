@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowDown, Download, ExternalLink } from "lucide-react";
+import { ArrowDown, ExternalLink, Mail } from "lucide-react";
 import { personalInfo } from "@/data/personal";
 import MagneticButton from "@/components/ui/MagneticButton";
 
@@ -150,7 +150,7 @@ export default function Hero() {
             size="lg"
             ariaLabel="Get in touch"
           >
-            <Download size={18} />
+            <Mail size={18} />
             Get in Touch
           </MagneticButton>
         </motion.div>

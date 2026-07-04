@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, useInView } from "framer-motion";
+import Image from "next/image";
 import { useRef, useEffect, useState } from "react";
 import { MapPin, GraduationCap, Briefcase, Award } from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading";
@@ -38,8 +39,8 @@ function AnimatedCounter({ target, suffix = "" }: { target: number; suffix?: str
 }
 
 const stats = [
-  { label: "Projects Completed", value: 2, icon: Briefcase, suffix: "+" },
-  { label: "Certifications", value: 6, icon: Award, suffix: "+" },
+  { label: "Projects Completed", value: 4, icon: Briefcase, suffix: "+" },
+  { label: "Certifications", value: 7, icon: Award, suffix: "+" },
   { label: "Research Areas", value: 5, icon: GraduationCap, suffix: "" },
 ];
 
@@ -64,10 +65,15 @@ export default function About() {
               
               {/* Photo container */}
               <div className="relative h-72 w-72 overflow-hidden rounded-3xl border border-white/[0.08] sm:h-80 sm:w-80">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/30 via-secondary/20 to-accent/30" />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="font-display text-7xl font-bold gradient-text">SK</span>
-                </div>
+                <Image
+                  src="/images/profile/sadashiv-kumar.jpg"
+                  alt={personalInfo.name}
+                  fill
+                  sizes="(max-width: 640px) 288px, 320px"
+                  className="object-cover"
+                  priority
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/45 via-transparent to-transparent" />
                 {/* Decorative elements */}
                 <div className="absolute -right-4 -top-4 h-20 w-20 rounded-full border border-primary/30 bg-primary/5" />
                 <div className="absolute -bottom-6 -left-6 h-28 w-28 rounded-full border border-secondary/30 bg-secondary/5" />

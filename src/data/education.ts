@@ -5,12 +5,12 @@ export const education: Education[] = [
     id: "nit-dgp",
     institution: "National Institute of Technology Durgapur",
     degree: "Master of Technology (M.Tech)",
-    field: "Operations Research",
+    field: "Mathematics and Computer Science",
     period: "2025 – 2027",
-    grade: "6.8",
+    grade: "7.19",
     gradeType: "CGPA",
     description:
-      "Pursuing advanced studies in Operations Research with focus on optimization methods, machine learning, and computational modelling for scientific and engineering applications.",
+      "Pursuing advanced studies in Mathematics and Computer Science with focus on machine learning, computational modelling, and mathematical foundations. M.Tech dissertation at IIT Patna on NLP and LLM applications in sports under the supervision of Dr. Sriparna Saha.",
   },
   {
     id: "gtu",

@@ -1,13 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Star, Cpu, Award } from "lucide-react";
+import { Star, Award, type LucideIcon } from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { achievements } from "@/data/achievements";
 
-const iconMap: Record<string, any> = {
+const iconMap: Record<string, LucideIcon> = {
   star: Star,
-  cpu: Cpu,
 };
 
 export default function Achievements() {

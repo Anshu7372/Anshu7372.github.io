@@ -2,6 +2,14 @@ import { Certification } from "@/types";
 
 export const certifications: Certification[] = [
   {
+    id: "microprocessor-8085",
+    title: "8085 Microprocessor — Certificate of Completion",
+    issuer: "Bharat Acharya Education",
+    platform: "Bharat Acharya Education",
+    date: "Completed",
+    icon: "cpu",
+  },
+  {
     id: "ml-math-foundations",
     title: "Mathematical Foundations for ML and Data Science",
     issuer: "DeepLearning.AI",

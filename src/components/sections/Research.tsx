@@ -1,11 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { BarChart3, Brain, Layers, Sparkles, Target } from "lucide-react";
+import { BarChart3, Brain, Layers, Sparkles, Target, type LucideIcon } from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { researchInterests } from "@/data/achievements";
 
-const iconMap: Record<string, any> = {
+const iconMap: Record<string, LucideIcon> = {
   barChart3: BarChart3,
   brain: Brain,
   layers: Layers,

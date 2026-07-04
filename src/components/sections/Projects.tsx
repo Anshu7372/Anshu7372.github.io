@@ -34,7 +34,7 @@ export default function Projects() {
                   {/* Aspect ratio container */}
                   <div className="aspect-video relative overflow-hidden">
                     <Image
-                      src={project.image.replace(".webp", ".png")}
+                      src={project.image.endsWith(".webp") ? project.image.replace(".webp", ".png") : project.image}
                       alt={project.title}
                       fill
                       sizes="(max-width: 1024px) 100vw, 50vw"

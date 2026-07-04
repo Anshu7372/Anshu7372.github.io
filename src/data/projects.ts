@@ -36,4 +36,40 @@ export const projects: Project[] = [
     image: "/images/projects/billing-system.webp",
     category: "Software Engineering",
   },
+  {
+    id: "notebook-editor-java",
+    title: "Notebook Editor in Java",
+    description:
+      "A desktop notebook editor built in Java for writing, editing, saving, and managing text notes with a simple user interface.",
+    longDescription:
+      "Developed a Java-based notebook editor that supports creating, editing, saving, and opening text documents through a clean desktop interface. The project focuses on file handling, event-driven programming, and modular Java design for a practical productivity tool.",
+    techStack: ["Java", "Swing", "AWT", "File Handling", "OOP"],
+    highlights: [
+      "Built a desktop text editor using Java Swing and AWT",
+      "Implemented create, open, edit, save, and clear document workflows",
+      "Used event-driven programming for menu actions and editor controls",
+      "Applied object-oriented design for maintainable application logic",
+    ],
+    github: "https://github.com/Anshu7372",
+    image: "/images/projects/notebook-editor.svg",
+    category: "Java Application",
+  },
+  {
+    id: "blood-donation-management-system",
+    title: "Blood Donation Management System",
+    description:
+      "A management system for organizing donor records, blood group availability, requests, and donation-related operations.",
+    longDescription:
+      "Created a Blood Donation Management System to streamline donor registration, blood group tracking, recipient requests, and administrative record management. The project emphasizes structured data handling, searchable records, and practical workflows for healthcare support systems.",
+    techStack: ["Java", "SQL", "DBMS", "OOP", "CRUD"],
+    highlights: [
+      "Designed donor, recipient, and blood inventory management workflows",
+      "Implemented CRUD operations for reliable record handling",
+      "Added searchable blood group and donor availability features",
+      "Structured the system for practical administrative use",
+    ],
+    github: "https://github.com/Anshu7372",
+    image: "/images/projects/blood-donation.svg",
+    category: "Management System",
+  },
 ];

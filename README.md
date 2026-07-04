@@ -1,4 +1,6 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Sadashiv Kumar Portfolio
+
+Personal portfolio built with Next.js.
 
 ## Getting Started
 
@@ -16,9 +18,15 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Contact Form / Google Drive Setup
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The contact form can save messages into the Google Drive account `sadashivkumar32@gmail.com` through a Google Apps Script web app. Deploy an Apps Script web app that writes each POST body into a Google Sheet or Drive file, then set this environment variable before building:
+
+```bash
+NEXT_PUBLIC_GOOGLE_APPS_SCRIPT_WEBHOOK_URL="your_apps_script_web_app_url"
+```
+
+Without this environment variable, the form falls back to opening an email draft.
 
 ## Learn More
 

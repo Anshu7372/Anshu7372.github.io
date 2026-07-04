@@ -3,7 +3,11 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, Send, CheckCircle, MapPin, Phone } from "lucide-react";
-import { GithubIcon as Github, LinkedinIcon as Linkedin } from "@/components/ui/BrandIcons";
+import {
+  GithubIcon as Github,
+  KaggleIcon as Kaggle,
+  LinkedinIcon as Linkedin,
+} from "@/components/ui/BrandIcons";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { personalInfo } from "@/data/personal";
 
@@ -11,15 +15,49 @@ export default function Contact() {
   const [formState, setFormState] = useState({ name: "", email: "", message: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [submitNote, setSubmitNote] = useState("");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    setIsSubmitting(false);
-    setSubmitted(true);
-    setFormState({ name: "", email: "", message: "" });
+
+    try {
+      const webhookUrl = process.env.NEXT_PUBLIC_GOOGLE_APPS_SCRIPT_WEBHOOK_URL;
+
+      if (!webhookUrl) {
+        throw new Error("Google Apps Script webhook is not configured");
+      }
+
+      const response = await fetch(webhookUrl, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          ...formState,
+          driveOwnerEmail: "sadashivkumar32@gmail.com",
+          submittedAt: new Date().toISOString(),
+          source: "portfolio-contact-form",
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Unable to save message");
+      }
+
+      setSubmitNote("Your message has been saved for Sadashiv Kumar.");
+      setSubmitted(true);
+      setFormState({ name: "", email: "", message: "" });
+    } catch {
+      const subject = encodeURIComponent(`Portfolio inquiry from ${formState.name}`);
+      const body = encodeURIComponent(
+        `Name: ${formState.name}\nEmail: ${formState.email}\n\n${formState.message}`,
+      );
+
+      window.location.href = `mailto:${personalInfo.email}?subject=${subject}&body=${body}`;
+      setSubmitNote("Drive saving is not configured yet, so an email draft was opened instead.");
+      setSubmitted(true);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -111,6 +149,15 @@ export default function Contact() {
                 >
                   <Github size={20} />
                 </a>
+                <a
+                  href={personalInfo.kaggle}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex h-10 w-10 items-center justify-center rounded-lg border border-white/[0.08] text-text-secondary transition-all hover:text-primary hover:border-primary/50 hover:bg-primary/10"
+                  aria-label="Kaggle profile"
+                >
+                  <Kaggle size={20} />
+                </a>
               </div>
             </div>
           </motion.div>
@@ -134,10 +181,10 @@ export default function Contact() {
                     <CheckCircle size={36} />
                   </div>
                   <h3 className="font-display text-xl font-bold text-text-primary">
-                    Message Sent Successfully!
+                    Message Received
                   </h3>
                   <p className="text-sm text-text-secondary max-w-sm mx-auto">
-                    Thank you for reaching out. I will get back to you as soon as possible.
+                    {submitNote}
                   </p>
                 </motion.div>
               ) : (
