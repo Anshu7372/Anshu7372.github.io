@@ -5,7 +5,7 @@ export const personalInfo = {
   firstName: "Sadashiv",
   lastName: "Kumar",
   location: "Samastipur, Bihar, India",
-  email: "sadashivkumar50@gmail.com",
+  email: "sadashivkumar32@gmail.com",
   phone: "+91-7373283295",
   github: "https://github.com/Anshu7372",
   githubUsername: "Anshu7372",
@@ -53,7 +53,7 @@ export const socialLinks: SocialLink[] = [
   },
   {
     name: "Email",
-    url: "mailto:sadashivkumar50@gmail.com",
+    url: "mailto:sadashivkumar32@gmail.com",
     icon: "mail",
   },
 ];
