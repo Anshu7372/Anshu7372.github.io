@@ -8,6 +8,13 @@ export const achievements: Achievement[] = [
       "Achieved the highest rating (5 stars) in Python programming on HackerRank, demonstrating advanced problem-solving and coding proficiency.",
     icon: "star",
   },
+  {
+    id: "gate-2025",
+    title: "GATE 2025 (Computer Science)",
+    description:
+      "Top 91% Performance Nationwide. Successfully qualified GATE 2025 in Computer Science & Information Technology, achieving a 91 percentile while demonstrating strong analytical thinking, problem-solving ability, and a solid foundation in core Computer Science subjects.",
+    icon: "award",
+  },
 ];
 
 export const researchInterests: ResearchInterest[] = [
